@@ -18,14 +18,14 @@ public class EmployeeService implements iPersonService<Employee> {
 
     @Override
     public List<Employee> getAll() {
-        return employees;
+        return this.employees;
     }
 
     @Override
     public void create(String name, int age) {
-        Employee epls = new Employee(name, age, "basic");
-        count++;
-        employees.add(epls);
+        Employee newEmployee = new Employee(name, age, "разнорабочий");
+        this.count++;
+        this.employees.add(newEmployee);
     }
 
     public void sortByFIO()

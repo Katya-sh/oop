@@ -45,20 +45,16 @@ public class App {
             System.out.println(std);
         }
 
-        Teacher t1 = new Teacher("Галина", 55, "Docent");
-        Teacher t2 = new Teacher("Татьяна", 57, "Docent");
+        Teacher t1 = new Teacher("Галина", 55, "Доцент");
+        Teacher t2 = new Teacher("Татьяна", 57, "Доцент");
 
         System.out.println(new PersonComparator<Student>().compare(s1, s3));
 
         Employee e1 = new Employee("Сергей", 55, "Разнорабочий");
+        Teacher teather = new Teacher("Ольга Григорьевна", 63, "Доцент");
 
-       // AccountController controller = new AccountController();
-       // controller.paySalary(t1, 50000);
-       // controller.paySalary(e1, 50000);
-
-       AccountController.paySalary(t1, 50000);
-       
        AccountController.paySalary(e1, 20000);
+       AccountController.paySalary(teather, 50000);
        
        System.out.println(AccountController.averageAge(listStud));
 

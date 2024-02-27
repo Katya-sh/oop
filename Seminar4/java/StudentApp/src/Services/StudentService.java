@@ -18,14 +18,14 @@ public class StudentService implements iPersonService<Student>  {
 
     @Override
     public List<Student> getAll() {
-       return students;
+       return this.students;
     }
 
     @Override
     public void create(String name, int age) {
-       Student stud = new Student(name, age);
-       count++;
-       students.add(stud);
+       Student newStudent = new Student(name, age);
+       this.count++;
+       this.students.add(newStudent);
     }   
     
     public void sortByFIO()
